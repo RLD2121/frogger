@@ -14,5 +14,6 @@ You will have 3 lives.
 
 Use your "left", "right", "up", "down", arrow keys to move the player.
 
+<a href="https://rld2121.github.io/frogger/">Play the Game</a>
 
 
