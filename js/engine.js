@@ -107,6 +107,14 @@ var Engine = (function(global) {
         /* This array holds the relative URL to the image used
          * for that particular row of the game level.
          */
+        
+          //Addition of scorboard
+                ctx.clearRect(0,0,200,50);
+                ctx.clearRect(300,0,200,50);
+                ctx.font = "30px Georgia";
+                ctx.fillStyle = "blue";
+                ctx.fillText("score:" + " " + player.score, 360, 40);
+        
         var rowImages = [
                 'images/water-block.png',   // Top row is water
                 'images/stone-block.png',   // Row 1 of 3 of stone
@@ -133,18 +141,7 @@ var Engine = (function(global) {
                  * we're using them over and over.
                  */
                 ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
-                
-                //Addition of scorboard
-                ctx.clearRect(0,0,200,50);
-                ctx.clearRect(300,0,200,50);
-                ctx.font = "30px Georgia";
-                ctx.fillStyle = "blue";
-                ctx.fillText("score:" + " " + player.score, 360, 40);
-                
-//                ctx.clearRect(0,0,200,50);
-//                ctx.font = "30px Georgia";
-//                ctx.fillStyle = "red";
-//                ctx.fillText("lives:" + " " + player.lives, 0, 40);
+             
             }
         }
 
