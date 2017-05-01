@@ -61,21 +61,14 @@ var Player = function(x,y) {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-//Enemy creation
-var enemy1 = new Enemy(0,220);
-var enemy2 = new Enemy(-300,140); 
-var enemy3 = new Enemy(-80,50);
-var enemy4 = new Enemy(-200,220);
-var enemy5 = new Enemy(-150, 140);
-var enemy6 = new Enemy(-300,50);
 
 //Pushing each enemy to the allEnemies array
-allEnemies.push(enemy1);
-allEnemies.push(enemy2);
-allEnemies.push(enemy3);
-allEnemies.push(enemy4);
-allEnemies.push(enemy5);
-allEnemies.push(enemy6);
+allEnemies.push(new Enemy(0,220));
+allEnemies.push(new Enemy(-300,140));
+allEnemies.push(new Enemy(-80,50));
+allEnemies.push(new Enemy(-200,220));
+allEnemies.push(new Enemy(-150, 140));
+allEnemies.push(new Enemy(-300,50));
 
 var player = new Player(200,400);
 
@@ -94,7 +87,7 @@ Player.prototype.update = function(dt) {
     }  else if (this.y > 400){
         this.y = 400;
     }  else if (this.y == -50) {
-        player.score ++;
+        this.score ++;
         this.reset();
     }  
 };
